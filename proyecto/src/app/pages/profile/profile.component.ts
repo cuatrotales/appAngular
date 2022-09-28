@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DxRadioGroupModule, DxTemplateModule } from 'devextreme-angular';
 
 @Component({
   templateUrl: 'profile.component.html',
