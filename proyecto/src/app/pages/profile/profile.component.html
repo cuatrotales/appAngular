@@ -2,16 +2,31 @@
 
 <div class="content-block dx-card responsive-paddings">
   <div class="form-avatar">
-    <img src="https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/{{employee.Picture}}"/>
+    <img
+      src="https://js.devexpress.com/Demos/WidgetsGallery/JSDemos/images/employees/06.png"
+    />
   </div>
-  <span>{{employee.Notes}}</span>
+  <span>{{ employee.Perfil }}</span>
 </div>
 
 <div class="content-block dx-card responsive-paddings">
-  <dx-form id="form"
-    [formData]="employee"
-    labelLocation="top"
-    [colCountByScreen]="colCountByScreen"
-  >
+  <dx-form id="form" [colCount]="2" [formData]="employee">
+    <dxi-item itemType="group" colSpan="2">
+      <dxi-item itemType="group" caption="Datos Personales">
+        <dxi-item dataField="Nombre"></dxi-item>
+        <dxi-item dataField="Apellido"></dxi-item>
+      </dxi-item>
+    </dxi-item>
+    <dxi-item itemType="group" caption="Contacto">
+      <dxi-item dataField="Telefono"></dxi-item>
+      <dxi-item dataField="Correo"></dxi-item>
+      <dxi-item dataField="Direccion"></dxi-item>
+      <dxi-item dataField="Ciudad"></dxi-item>
+    </dxi-item>
+    <dxi-item itemType="group" caption="Adicional">
+      <dxi-item dataField="Cargo"></dxi-item>
+      <dxi-item dataField="Sexo"></dxi-item>
+      <dxi-item dataField="Perfil"></dxi-item>
+    </dxi-item>
   </dx-form>
 </div>
