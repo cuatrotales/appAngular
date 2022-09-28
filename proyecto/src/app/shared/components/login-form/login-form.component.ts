@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { DxButtonModule } from 'devextreme-angular';
 import { DxFormModule } from 'devextreme-angular/ui/form';
 import { DxLoadIndicatorModule } from 'devextreme-angular/ui/load-indicator';
 import notify from 'devextreme/ui/notify';
@@ -29,17 +30,14 @@ export class LoginFormComponent {
       notify(result.message, 'error', 2000);
     }
   }
-
-  onCreateAccountClick = () => {
-    this.router.navigate(['/create-account']);
-  }
 }
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     DxFormModule,
-    DxLoadIndicatorModule
+    DxLoadIndicatorModule,
+    DxButtonModule
   ],
   declarations: [ LoginFormComponent ],
   exports: [ LoginFormComponent ]
