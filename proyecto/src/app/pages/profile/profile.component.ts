@@ -20,7 +20,7 @@ export class ProfileComponent {
       Ciudad: 'Medellín',
       Sexo: 'Hombre',
       /* tslint:disable-next-line:max-line-length */
-      Perfil: 'Juan Felipe Quintero Gutierrez.\r\n\r\n El mejor de lo mejor.'
+      Perfil: 'No hay mucho para decir.'
     };
     this.colCountByScreen = {
       xs: 1,

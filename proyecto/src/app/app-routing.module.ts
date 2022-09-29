@@ -4,13 +4,13 @@ import { LoginFormComponent, ResetPasswordFormComponent, CreateAccountFormCompon
 import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { TasksComponent } from './pages/tasks/tasks.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
 
 const routes: Routes = [
   {
-    path: 'tasks',
-    component: TasksComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
     canActivate: [ AuthGuardService ]
   },
   {
@@ -56,7 +56,7 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     ProfileComponent,
-    TasksComponent
+    DashboardComponent
   ]
 })
 export class AppRoutingModule { }
