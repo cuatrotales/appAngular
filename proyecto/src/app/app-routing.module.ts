@@ -6,8 +6,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DxDataGridModule, DxFormModule } from 'devextreme-angular';
+import { DataComponent } from './pages/data/data.component';
 
 const routes: Routes = [
+  {
+    path: 'data',
+    component: DataComponent,
+    canActivate: [ AuthGuardService ]
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -56,7 +62,8 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    DataComponent,
   ]
 })
 export class AppRoutingModule { }

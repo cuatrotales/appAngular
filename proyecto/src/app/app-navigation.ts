@@ -15,6 +15,10 @@ export const navigation = [
       {
         text: 'Dashboard',
         path: '/dashboard'
+      },
+      {
+        text: 'Data',
+        path: '/data'
       }
     ]
   }
