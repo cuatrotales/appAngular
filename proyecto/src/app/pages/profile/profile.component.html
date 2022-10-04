@@ -1,0 +1,44 @@
+<h2 class="content-block">PERFIL</h2>
+
+<figure class="dx-card md:flex rounded-xl p-8 md:p-0 mx-10 shadow-lg">
+  <img
+    class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto sm:ml-0"
+    src="https://images.wallpaperscraft.com/image/single/astronaut_water_space_158953_320x480.jpg"
+    alt="Imagen de inicio"
+  />
+  <div class="pt-6 md:p-8 text-center md:text-left space-y-4 mx-auto">
+    <blockquote class="text-lg font-medium">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui voluptas corporis inventore? Corrupti, laborum atque tenetur fuga in ipsum repellat perferendis ipsa ipsam tempora nemo dicta soluta! Quo, aliquid officia!
+    </blockquote>
+    <figcaption class="font-medium">
+      <div class="text-sky-500 dark:text-sky-400">
+        {{ employee.Nombre }} {{ employee.Apellido }}
+      </div>
+      <div class="text-slate-700 dark:text-slate-500">
+        "{{ employee.Perfil }}"
+      </div>
+    </figcaption>
+  </div>
+</figure>
+
+<div class="content-block dx-card rounded-xl p-8 mx-10 shadow-lg">
+  <dx-form id="form" [colCount]="2" [formData]="employee">
+    <dxi-item itemType="group" colSpan="2">
+      <dxi-item itemType="group" caption="Datos Personales">
+        <dxi-item dataField="Nombre"></dxi-item>
+        <dxi-item dataField="Apellido"></dxi-item>
+      </dxi-item>
+    </dxi-item>
+    <dxi-item itemType="group" caption="Contacto">
+      <dxi-item dataField="Telefono"></dxi-item>
+      <dxi-item dataField="Correo"></dxi-item>
+      <dxi-item dataField="Direccion"></dxi-item>
+      <dxi-item dataField="Ciudad"></dxi-item>
+    </dxi-item>
+    <dxi-item itemType="group" caption="Adicional">
+      <dxi-item dataField="Cargo"></dxi-item>
+      <dxi-item dataField="Sexo"></dxi-item>
+      <dxi-item dataField="Perfil"></dxi-item>
+    </dxi-item>
+  </dx-form>
+</div>
